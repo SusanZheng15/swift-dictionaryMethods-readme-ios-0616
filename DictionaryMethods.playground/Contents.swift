@@ -1,4 +1,5 @@
-let toyStoryFilms = [
+let toyStoryFilms =
+[
     "Toy Story",
     "Toy Story 2",
     "Buzz Lightyear of Star Command: The Adventure Begins",
@@ -6,7 +7,8 @@ let toyStoryFilms = [
     "Toy Story 4"
 ]
 
-let starWarsFilms = [
+let starWarsFilms =
+[
     "Star Wars",
     "The Empire Strikes Back",
     "Star Wars: Episode VI",
@@ -19,7 +21,8 @@ let starWarsFilms = [
     "Star Wars: Episode IX"
 ]
 
-let fastAndFuriousFilms = [
+let fastAndFuriousFilms =
+[
     "The Fast and the Furious",
     "2 Fast 2 Furious",
     "Turbo-Charged Prelud",
@@ -32,13 +35,15 @@ let fastAndFuriousFilms = [
     "Fast 8"
 ]
 
-var movies = [
+var movies =
+[
     "Toy Story": toyStoryFilms,
     "Star Wars": starWarsFilms,
     "The Fast and the Furious": fastAndFuriousFilms
 ]
 
-let godfatherFilms = [
+let godfatherFilms =
+[
     "The Godfather",
     "The Godfather Part II",
     "The Godfather Part III"
@@ -56,7 +61,8 @@ print(result2)
 let films = movies["The Godfather"]
 print(films)
 
-if let godfatherMovies = movies["The Godfather"] {
+if let godfatherMovies = movies["The Godfather"]
+{
     print(godfatherMovies)
 }
 
@@ -64,15 +70,18 @@ if let godfatherMovies = movies["The Godfather"] {
 
 // MODIFYING VALUES
 
-if var films = movies["The Fast and the Furious"] {
+if var films = movies["The Fast and the Furious"]
+{
     films.append("Faster! 9")
     films.append("THE FASTEST 10")
     
     movies["The Fast and the Furious"] = films
 }
 
-if let fastMovies = movies["The Fast and the Furious"] {
-    for (index, film) in fastMovies.enumerate() {
+if let fastMovies = movies["The Fast and the Furious"]
+{
+    for (index, film) in fastMovies.enumerate()
+    {
         print("\(index + 1). \(film)")
     }
 }
@@ -83,9 +92,12 @@ if let fastMovies = movies["The Fast and the Furious"] {
 
 movies["The Fast and the Furious"] = nil
 
-if let fast3rFilms = movies["The Fast and the Furious"] {
+if let fast3rFilms = movies["The Fast and the Furious"]
+{
     print("\(fast3rFilms)")
-} else {
+}
+else
+{
     print("YAY! no more Fast & Furious movies!")
 }
 
@@ -95,7 +107,8 @@ movies.removeValueForKey("The Fast and the Furious")
 
 // COUNTING ITEMS
 
-let planetsAndTheirMoons = [
+let planetsAndTheirMoons =
+[
     "Mercury": 0,
     "Venus": 0,
     "Earth": 1,
@@ -107,7 +120,8 @@ let planetsAndTheirMoons = [
 ]
 
 var planetCount = 0
-for (planet, numberOfMoons) in planetsAndTheirMoons {
+for (planet, numberOfMoons) in planetsAndTheirMoons
+{
     planetCount += 1
 }
 print(planetCount)
@@ -116,17 +130,23 @@ let planetCount2 = planetsAndTheirMoons.count
 print(planetCount2)
 
 
-if planetsAndTheirMoons.isEmpty {
+if planetsAndTheirMoons.isEmpty
+{
     print("planetsAndTheirMoons is empty")
-} else {
+}
+else
+{
     print("planetsAndTheirMoons has \(planetsAndTheirMoons.count) items")
 }
 
 
 var emptyDictionary = [String: String]()
-if emptyDictionary.isEmpty {
+if emptyDictionary.isEmpty
+{
     print("Ah hah! It's empty.")
-} else {
+}
+else
+{
     print("There's something here...")
 }
 
@@ -136,7 +156,8 @@ if emptyDictionary.isEmpty {
 
 let planetNames = Array(planetsAndTheirMoons.keys)
 
-for planet in planetsAndTheirMoons.keys {
+for planet in planetsAndTheirMoons.keys
+{
     print(planet)
 }
 
@@ -146,6 +167,7 @@ for planet in planetsAndTheirMoons.keys {
 
 let allTheMoons = Array(planetsAndTheirMoons.values)
 
-for numberOfMoons in planetsAndTheirMoons.values {
+for numberOfMoons in planetsAndTheirMoons.values
+{
     print(numberOfMoons)
 }
